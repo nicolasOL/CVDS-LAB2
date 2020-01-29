@@ -65,7 +65,11 @@
           <artifactId>maven-site-plugin</artifactId>
           <version>3.7.1</version>
         </plugin>
-	<plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+		<plugin>
         <groupId>edu.eci.cvds</groupId>
         <artifactId>Patterns</artifactId>
         <version>1.8</version>
@@ -81,10 +85,9 @@
           <mainClass>edu.eci.cvds.patterns.App</mainClass>
           <arguments>
             <argument>arg0</argument>
-            <argument>arg1</argument>
           </arguments>
         </configuration>
-      </plugin>
+		</plugin>
       </plugins>
     </pluginManagement>
   </build>

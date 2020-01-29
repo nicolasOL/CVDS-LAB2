@@ -1,4 +1,5 @@
 package edu.eci.cvds.patterns.shapes;
+import edu.eci.cvds.patterns.shapes.concrete.*;
 
 public class ShapeMain {
     public static void main(String[] args) {
@@ -7,15 +8,12 @@ public class ShapeMain {
             return;
         }
         try {
-
             RegularShapeType type = RegularShapeType.valueOf(args[0]);
             Shape shape = ShapeFactory.create(type);
-            
-            System.out.println(String.format("Successfully created a %s with %s sides.", type, shape.getNumberOfEdges()));
-
+            System.out.println("Successfully created a "+type +"with "+ shape.getNumberOfEdges()+" sides.");
         } catch (IllegalArgumentException ex) {
-            System.err.println("Parameter '" + args[0] + "' is not a valid RegularShapeType");
+            System.out.println("Parameter '" + args[0] + "' is not a valid RegularShapeType");
             return;
-        }
+        } 
     }
 }
